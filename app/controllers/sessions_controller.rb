@@ -13,8 +13,14 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    log_out
+    log_out if logged_in?
     redirect_to root_path
+  end
+
+  def login user
+    log_in user
+    remember_me user
+    redirect_to user
   end
 
   private
@@ -22,5 +28,13 @@ class SessionsController < ApplicationController
   def flash_danger
     flash.now[:danger] = t ".login_error"
     render :new
+  end
+
+  def remember_me user
+    if params[:session][:remember_me] == Settings.sessions.is_remember
+      remember user
+    else
+      forget user
+    end
   end
 end
