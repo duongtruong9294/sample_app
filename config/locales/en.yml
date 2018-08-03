@@ -21,3 +21,10 @@ en:
   user_mailer:
     account_activation: "Account activation"
     reset_password: "Password reset"
+  application:
+    please_login: "Please log in."
+  microposts:
+    create_success: "Micropost created!"
+    delete_success: "Micropost deleted"
+  micropost:
+    img_less_than: "should be less than 5MB"

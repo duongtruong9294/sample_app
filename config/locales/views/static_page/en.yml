@@ -3,9 +3,12 @@ en:
     home:
       title: "Home"
       link: "This is the home page for the %{url} sample application."
+      text: "This is the home page for the"
       title_link: "Ruby on Rails Tutorial"
       logo: "Rails logo"
       signup: "Sign up now!"
+      wellcome: "Welcome to the Sample App"
+      micropost: "Micropost Feed"
     help:
       title: "Help"
       link_1: "Get help on the Ruby on Rails Tutorial at the %{url_1}."
