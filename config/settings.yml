@@ -4,3 +4,5 @@ user:
   min_pass: 6
 sessions:
   is_remember: "1"
+users:
+  size: 80

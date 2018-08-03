@@ -8,3 +8,10 @@ en:
       password: "Password"
       confirmation: "Confirmation"
       submit: "Create my account"
+    index:
+      all: "All users"
+    edit:
+      title: "Edit user"
+      text: "Update your profile"
+      change: "change"
+

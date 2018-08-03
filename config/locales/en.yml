@@ -1,5 +1,9 @@
 en:
   users:
+    flash_danger: "Please log in."
+    update_success: "Profile updated"
+    deleted_success: "User deleted"
+    deleted_danger: "User delete failed"
     create:
       wellcome: "Welcome to the Sample App!"
   hello: "Hello world"

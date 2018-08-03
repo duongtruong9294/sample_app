@@ -5,8 +5,7 @@ class SessionsController < ApplicationController
     return flash_danger unless params[:session].present?
     user = User.find_by email: params[:session][:email].downcase
     if user&.authenticate(params[:session][:password])
-      log_in user
-      redirect_to user
+      login user
     else
       flash_danger
     end
@@ -20,7 +19,7 @@ class SessionsController < ApplicationController
   def login user
     log_in user
     remember_me user
-    redirect_to user
+    redirect_back_or user
   end
 
   private
