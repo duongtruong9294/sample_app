@@ -4,6 +4,7 @@ en:
       title: "Home"
       link: "This is the home page for the %{url} sample application."
       title_link: "Ruby on Rails Tutorial"
+      logo: "Rails logo"
     help:
       title: "Help"
       link_1: "Get help on the Ruby on Rails Tutorial at the %{url_1}."
@@ -20,3 +21,7 @@ en:
       title_link3: "screencast series"
       link_4: "%{url_4}. This is the sample application for the tutorial."
       title_link4: "Ruby on Rails"
+    contact:
+      title: "Contact"
+      text: "Contact"
+      contact_page: "contact page"
