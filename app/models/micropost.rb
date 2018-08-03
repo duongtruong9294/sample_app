@@ -8,6 +8,7 @@ class Micropost < ApplicationRecord
 
   scope :post_new, ->{order(created_at: :desc)}
   scope :by_user_id, ->(id){where user_id: id}
+  scope :by_follow, ->(following_ids, id){where("user_id IN (?) OR user_id = ?", following_ids, id)}
 
   private
   def picture_size

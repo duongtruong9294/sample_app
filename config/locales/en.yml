@@ -6,6 +6,10 @@ en:
     deleted_danger: "User delete failed"
     create:
       wellcome: "Welcome to the Sample App!"
+    following:
+      title: "Following"
+    followers:
+      title: "Followers"
   hello: "Hello world"
   account_activations:
     account_activate: "Account activated!"

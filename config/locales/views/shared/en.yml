@@ -10,4 +10,6 @@ en:
     micropost_form:
       submit: "Submit"
       text: "Compose new micropost..."
-
+    status:
+      following: "following"
+      followers: "followers"
