@@ -2,7 +2,9 @@ user:
   max_name: 50
   max_email: 255
   min_pass: 6
+  time_reset: 2
 sessions:
   is_remember: "1"
 users:
   size: 80
+

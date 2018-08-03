@@ -7,3 +7,8 @@ en:
       activate: "Activate"
       title: "User#password_reset"
       notice: "find me in app/views/user_mailer/password_reset.html.erb"
+    password_reset:
+      text: "To reset your password click the link below:"
+      content: "This link will expire in two hours.
+                If you did not request your password to be reset, please ignore this email and
+                your password will stay as it is."

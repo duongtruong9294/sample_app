@@ -12,3 +12,12 @@ en:
     invalid_activate: "Invalid activation link"
   sessions:
     account_not_activated: "Account not activated. Check your email for the activation link."
+  password_resets:
+    info: "Email sent with password reset instructions"
+    not_found_email: "Email address not found"
+    password_reset: "Password has been reset."
+    password_reset_eror: "Password reset has expired."
+    check_empty: "can't be empty"
+  user_mailer:
+    account_activation: "Account activation"
+    reset_password: "Password reset"
