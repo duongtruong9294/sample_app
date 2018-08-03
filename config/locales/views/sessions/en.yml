@@ -1,0 +1,8 @@
+en:
+  sessions:
+    new:
+      login: "Login"
+      signup: "Sign up now!"
+    create:
+      login_error: "Invalid email/password combination"
+
