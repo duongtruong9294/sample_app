@@ -32,7 +32,7 @@ Style/AsciiComments:
   Description: "Use only ascii symbols in comments."
   Enabled: true
 
-Style/AsciiIdentifiers:
+Naming/AsciiIdentifiers:
   Description: "Use only ascii symbols in identifiers."
   Enabled: true
 
@@ -75,7 +75,7 @@ Style/CharacterLiteral:
   Description: "Checks for uses of character literals."
   Enabled: true
 
-Style/ClassAndModuleCamelCase:
+Naming/ClassAndModuleCamelCase:
   Description: "Use CamelCase for classes and modules."
   Enabled: true
 
@@ -113,7 +113,7 @@ Layout/CommentIndentation:
   Description: "Indentation of comments."
   Enabled: true
 
-Style/ConstantName:
+Naming/ConstantName:
   Description: "Constants should use SCREAMING_SNAKE_CASE."
   Enabled: true
 
@@ -185,7 +185,7 @@ Style/EvenOdd:
   Description: "Favor the use of Fixnum#even? && Fixnum#odd?"
   Enabled: true
 
-Style/FileName:
+Naming/FileName:
   Description: "Use snake_case for source file names."
   Enabled: true
 
@@ -265,7 +265,6 @@ Metrics/LineLength:
   Description: "Limit lines to 80 characters."
   Enabled: true
 
-# Style/MethodCallParentheses:
 Style/MethodCallWithoutArgsParentheses:
   Description: "Do not use parentheses for method calls with no arguments."
   Enabled: true
@@ -276,7 +275,7 @@ Style/MethodDefParentheses:
                  parentheses.
   Enabled: true
 
-Style/MethodName:
+Naming/MethodName:
   Description: "Use the configured style when naming methods."
   Enabled: true
 
@@ -340,7 +339,7 @@ Style/OneLineConditional:
                  if/then/else/end constructs.
   Enabled: true
 
-Style/OpMethod:
+Naming/BinaryOperatorParameterName:
   Description: "When defining binary operators, name the argument other."
   Enabled: true
 
@@ -358,7 +357,7 @@ Style/PerlBackrefs:
   Description: "Avoid Perl-style regex back references."
   Enabled: true
 
-Style/PredicateName:
+Naming/PredicateName:
   Description: "Check the names of predicate methods."
   Enabled: true
 
@@ -418,7 +417,6 @@ Style/SingleLineMethods:
   Description: "Avoid single-line methods."
   Enabled: true
 
-# Style/SingleSpaceBeforeFirstArg:
 Layout/SpaceBeforeFirstArg:
   Description: >-
                  Checks that exactly one space is used between a method name
@@ -433,7 +431,6 @@ Layout/SpaceAfterComma:
   Description: "Use spaces after commas."
   Enabled: true
 
-# Style/SpaceAfterControlKeyword:
 Layout/SpaceAroundKeyword:
   Description: "Use spaces after if/elsif/unless/while/until/case/when."
   Enabled: true
@@ -490,12 +487,8 @@ Layout/SpaceAroundOperators:
   Description: "Use spaces around operators."
   Enabled: true
 
-# Style/SpaceBeforeModifierKeyword:
-  # Description: "Put a space before the modifier keyword."
-  # Enabled: true
-
-Layout/SpaceInsideBrackets:
-  Description: "No spaces after [ or before ]."
+Layout/SpaceAroundKeyword:
+  Description: "Put a space before the modifier keyword."
   Enabled: true
 
 Layout/SpaceInsideHashLiteralBraces:
@@ -522,9 +515,18 @@ Layout/TrailingBlankLines:
   Description: "Checks trailing blank lines and final newline."
   Enabled: true
 
-# Style/TrailingComma:
-Style/TrailingCommaInLiteral:
-  Description: "Checks for trailing comma in parameter lists and literals."
+Style/TrailingCommaInArguments:
+  Description: 'Checks for trailing comma in argument lists.'
+  StyleGuide: '#no-trailing-params-comma'
+  Enabled: true
+
+Style/TrailingCommaInArrayLiteral:
+  Description: 'Checks for trailing comma in array literals.'
+  StyleGuide: '#no-trailing-array-commas'
+  Enabled: true
+
+Style/TrailingCommaInHashLiteral:
+  Description: 'Checks for trailing comma in hash literals.'
   Enabled: true
 
 Layout/TrailingWhitespace:
@@ -555,7 +557,7 @@ Style/VariableInterpolation:
                  directly in strings.
   Enabled: true
 
-Style/VariableName:
+Naming/VariableName:
   Description: "Use the configured style when naming variables."
   Enabled: true
 
@@ -592,11 +594,11 @@ Lint/AmbiguousRegexpLiteral:
                  a method invocation without parenthesis.
   Enabled: true
 
-Lint/BlockAlignment:
+Layout/BlockAlignment:
   Description: "Align block ends correctly."
   Enabled: true
 
-Lint/ConditionPosition:
+Layout/ConditionPosition:
   Description: "Checks for condition placed in a confusing position relative to the keyword."
   Enabled: true
 
@@ -604,7 +606,7 @@ Lint/Debugger:
   Description: "Check for debugger calls."
   Enabled: true
 
-Lint/DefEndAlignment:
+Layout/DefEndAlignment:
   Description: "Align ends corresponding to defs correctly."
   Enabled: true
 
@@ -624,7 +626,7 @@ Lint/EmptyInterpolation:
   Description: "Checks for empty string interpolation."
   Enabled: true
 
-Lint/EndAlignment:
+Layout/EndAlignment:
   Description: "Align ends correctly."
   Enabled: true
 
@@ -636,23 +638,12 @@ Lint/EnsureReturn:
   Description: "Never use return in an ensure block."
   Enabled: true
 
-# Lint/Eval:
-Security:
+Security/Eval:
   Description: "The use of eval represents a serious security risk."
   Enabled: true
 
 Lint/HandleExceptions:
   Description: "Don't suppress exception."
-  Enabled: true
-
-Lint/InvalidCharacterLiteral:
-  Description: >-
-                 Checks for invalid character literals with a non-escaped
-                 whitespace character.
-  Enabled: true
-
-Lint/LiteralInCondition:
-  Description: "Checks of literals used in conditions."
   Enabled: true
 
 Lint/LiteralInInterpolation:
@@ -687,8 +678,7 @@ Lint/ShadowingOuterLocalVariable:
                  for block arguments or block local variables.
   Enabled: true
 
-# Lint/SpaceBeforeFirstArg:
-Style:
+Layout/SpaceBeforeFirstArg:
   Description: >-
                  Put a space between a method name and the first argument
                  in a method call without parentheses.
@@ -743,10 +733,6 @@ Lint/Void:
 Rails/ActionFilter:
   Description: "Enforces consistent use of action filter methods."
   Enabled: true
-
-# Rails/DefaultScope:
-#   Description: "Checks if the argument passed to default_scope is a block."
-#   Enabled: true
 
 Rails/Delegate:
   Description: "Prefer delegate method for delegations."
