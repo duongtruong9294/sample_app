@@ -1,7 +1,7 @@
 en:
   static_page:
     home:
-      title: "Sample App"
+      title: "Home"
       link: "This is the home page for the %{url} sample application."
       title_link: "Ruby on Rails Tutorial"
     help:
