@@ -2,3 +2,17 @@ en:
   layouts:
     application:
       site_title: "Ruby on Rails Tutorial Sample App"
+    header:
+      sample: "Sample app"
+      home: "Home"
+      help: "Help"
+      login: "Log in"
+    footer:
+      about: "About"
+      contact: "Contact"
+      news: "News"
+      title: "Ruby on Rails Tutorial"
+      the: "The"
+      rails_title: "Rails Tutorial help page"
+      by: "by"
+      author: "Michael Hartl"
