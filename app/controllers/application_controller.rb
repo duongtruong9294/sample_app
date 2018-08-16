@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :set_locale
   rescue_from ActiveRecord::RecordNotFound, with: :page_not_found?
+
   include SessionsHelper
   def hello
     render html: "hello, world!"
