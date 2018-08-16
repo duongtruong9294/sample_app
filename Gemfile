@@ -18,7 +18,9 @@ gem "bcrypt", "3.1.12"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "bootstrap-sass", "3.3.7"
 gem "config"
+gem "jquery-rails", "~> 4.3", ">= 4.3.3"
 gem "rails-controller-testing"
+gem "rails-ujs", "~> 0.1.0"
 gem "rubocop", "~> 0.54.0", require: false
 
 group :development, :test do
