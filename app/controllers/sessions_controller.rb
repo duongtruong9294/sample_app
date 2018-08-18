@@ -3,9 +3,12 @@ class SessionsController < ApplicationController
 
   def create
     return flash_danger unless params[:session].present?
-    user = User.find_by email: params[:session][:email].downcase
-    if user&.authenticate(params[:session][:password])
-      login user
+    session = params[:session]
+    user = User.find_by email: session[:email].downcase
+    if user&.authenticate(session[:password])
+      log_in user
+      remember_me user
+      redirect_back_or user
     else
       flash_danger
     end
@@ -35,5 +38,11 @@ class SessionsController < ApplicationController
     else
       forget user
     end
+  end
+
+  def message
+    message = t ".account_not_activated"
+    flash[:warning] = message
+    redirect_to root_path
   end
 end

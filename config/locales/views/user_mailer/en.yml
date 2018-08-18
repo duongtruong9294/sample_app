@@ -1,0 +1,9 @@
+en:
+  user_mailer:
+    account_activation:
+      sample_app: "Sample App"
+      hi: "Hi"
+      text: "Welcome to the Sample App! Click on the link below to activate your account:"
+      activate: "Activate"
+      title: "User#password_reset"
+      notice: "find me in app/views/user_mailer/password_reset.html.erb"

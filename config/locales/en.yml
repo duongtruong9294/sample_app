@@ -7,3 +7,8 @@ en:
     create:
       wellcome: "Welcome to the Sample App!"
   hello: "Hello world"
+  account_activations:
+    account_activate: "Account activated!"
+    invalid_activate: "Invalid activation link"
+  sessions:
+    account_not_activated: "Account not activated. Check your email for the activation link."

@@ -7,4 +7,3 @@ en:
       remember: "Remember me on this computer"
     create:
       login_error: "Invalid email/password combination"
-
