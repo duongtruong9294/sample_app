@@ -14,5 +14,10 @@ en:
       title: "Edit user"
       text: "Update your profile"
       change: "change"
+      name: "Name"
+      email: "Email"
+      password: "Password"
+      confirmation: "Confirmation"
+      submit: "Save changes"
     create:
       info: "Please check your email to activate your account."

@@ -6,6 +6,7 @@ class SessionsController < ApplicationController
     session = params[:session]
     user = User.find_by email: session[:email].downcase
     if user&.authenticate(session[:password])
+      return message unless user.activated?
       log_in user
       remember_me user
       redirect_back_or user
