@@ -1,10 +1,12 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, expect: [:show, :new, :create]
+  before_action :logged_in_user, except: [:show, :new, :create]
   before_action :correct_user, only: [:edit, :update]
   before_action :admin_user, only: :destroy
-  before_action :load_user, expect: [:index, :new, :create]
+  before_action :load_user, except: [:index, :new, :create]
 
-  def show; end
+  def show
+    @microposts = @user.microposts.paginate(page: params[:page])
+  end
 
   def index
     @users = User.paginate(page: params[:page])
@@ -59,7 +61,6 @@ class UsersController < ApplicationController
   end
 
   def correct_user
-    @user = User.find params[:id]
     redirect_to(root_path) unless current_user? @user
   end
 

@@ -5,3 +5,9 @@ en:
       error:
         one: "1 error"
         other: "%{count} errors"
+    user_info:
+      view_profile: "view my profile"
+    micropost_form:
+      submit: "Submit"
+      text: "Compose new micropost..."
+

@@ -12,3 +12,4 @@ en:
       content: "This link will expire in two hours.
                 If you did not request your password to be reset, please ignore this email and
                 your password will stay as it is."
+      reset_password: "Reset password"

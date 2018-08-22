@@ -7,4 +7,6 @@ sessions:
   is_remember: "1"
 users:
   size: 80
-
+micropost:
+  img_size: 5
+  max_content: 140
