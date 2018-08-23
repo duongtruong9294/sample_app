@@ -10,6 +10,7 @@ en:
       submit: "Create my account"
     index:
       all: "All users"
+      please_login: "Please log in."
     edit:
       title: "Edit user"
       text: "Update your profile"
@@ -22,3 +23,11 @@ en:
       submit: "Save changes"
     create:
       info: "Please check your email to activate your account."
+    show:
+      microposts: "Microposts"
+    follow:
+      submit: "Follow"
+    unfollow:
+      submit: "Unfollow"
+    user:
+      confirm_delete: "You sure?"
